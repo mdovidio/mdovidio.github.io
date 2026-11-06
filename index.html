@@ -168,6 +168,7 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
 .commercial { padding-block: 64px; }
 .commercial .section-head p:not(.label) { color: var(--on-cocoa-soft); }
+.band-note { margin: 4px 0 0; color: var(--on-cocoa-soft); }
 .lav-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
 .lav-tile { display: grid; gap: 10px; align-content: start; justify-items: start; min-width: 0; }
 .lav-tile h3 { font-size: var(--step-2); margin-top: 8px; }
@@ -226,33 +227,22 @@ html:has(.lav-dialog[open]) { overflow: hidden; }
 .aud-key span { display: flex; align-items: center; gap: 8px; }
 .aud-key svg { width: 13px; height: auto; flex: none; }
 .aud-fixes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
-.aud-fixes li { display: grid; grid-template-columns: 26px minmax(0, 1fr); column-gap: 12px; }
+.aud-fixes li { display: grid; grid-template-columns: 26px minmax(0, 1fr); column-gap: 12px; align-content: start; }
 .aud-fixes li > :not(b) { grid-column: 2; }
-.aud-fixes b { width: 26px; height: 26px; background: var(--ink); color: var(--paper); border-radius: 50%; display: grid; place-items: center; font-size: .78rem; font-weight: 500; grid-row: 1 / span 3; }
+.aud-fixes b { width: 26px; height: 26px; background: var(--ink); color: var(--paper); border-radius: 50%; display: grid; place-items: center; font-size: .78rem; font-weight: 500; grid-row: 1 / span 2; }
 .aud-fixes h4 { font: italic 400 1.28rem/1.15 var(--display); margin: 0 0 3px; }
 .aud-fixes p { margin: 0; font-size: .82rem; line-height: 1.35; color: var(--ink-soft); }
+.aud-head { margin: 0 0 14px; font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.aud-head .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.aud-fixes p.fix span { color: #9A5B43; font-weight: 700; }
 .aud-fixes p.fix { margin-top: 2px; color: var(--ink); font-weight: 500; }
-.aud-score { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 28px; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--oat); }
-.aud-lab { font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); line-height: 1.5; }
-.aud-scores { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; font-size: .78rem; line-height: 1.25; color: var(--ink-soft); }
-.aud-scores div { display: grid; gap: 6px; align-content: start; }
-.aud-scores .dots { display: flex; gap: 4px; }
-.aud-scores .dots i { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--cocoa); display: block; }
-.aud-scores .dots i.on { background: var(--cocoa); }
-.aud-total { text-align: right; line-height: 1.1; }
-.aud-total strong { display: block; font: 400 2rem/1 var(--display); }
-.aud-total span { font-size: .76rem; color: var(--ink-soft); }
 @media (max-width: 900px) {
   .aud-main { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .aud-fixes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .aud-score { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  .aud-scores { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .aud-total { text-align: left; }
-}
+      }
 @media (max-width: 520px) {
   .aud-fixes { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .aud-scores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+  }
 .cal figcaption { margin-bottom: 16px; }
 .cal figcaption h3 { font-size: var(--step-2); margin-bottom: 4px; }
 .cal figcaption p { margin: 0; color: var(--on-cocoa-soft); }
@@ -460,6 +450,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="section-head">
         <h2 class="section-label">Brand and retail activation</h2>
         <p class="band-title">Lavazza Group</p>
+        <p class="band-note">Two highlights from my cross-functional work with marketing.</p>
       </div>
       <div class="lav-grid">
         <article class="lav-tile">
@@ -496,7 +487,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <figure class="cal">
         <figcaption>
           <h3>What the shopper sees</h3>
-          <p>Audited shelves retailer by retailer on six criteria, then turned the photos and data into a specific fix for each.</p>
+          <p>Audited shelves retailer by retailer, then turned the photos and data into a specific fix for each.</p>
         </figcaption>
         <div class="cal-card">
           <div class="aud-main">
@@ -506,11 +497,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 </svg></div>
               <div class="aud-key"><div class="grp"><b>Our brand</b><span><svg viewBox="0 0 40 68"><rect x="0" y="0" width="40" height="68" rx="4" fill="#9A5B43"/><rect x="0" y="7" width="40" height="1.5" fill="#FFFDF9" opacity=".45"/><circle cx="20.0" cy="35.36" r="9" fill="#FFFDF9" opacity=".9"/></svg>Core</span><span><svg viewBox="0 0 40 68"><rect x="0" y="0" width="40" height="68" rx="4" fill="#9A5B43"/><rect x="0" y="7" width="40" height="1.5" fill="#FFFDF9" opacity=".45"/><polygon points="20.0,20.4 23.6,30.3 34.3,30.7 25.9,37.3 28.8,47.5 20.0,41.6 11.2,47.5 14.1,37.3 5.7,30.7 16.4,30.3" fill="#FFFDF9"/></svg>Priority</span><span><svg viewBox="0 0 40 68"><rect x="1.5" y="1.5" width="37" height="65" rx="3" fill="#FFFDF9" stroke="#9A5B43" stroke-width="3"/><circle cx="20.0" cy="35.36" r="7" fill="#9A5B43"/></svg>Slow seller</span></div><div class="grp"><b>Others</b><span><svg viewBox="0 0 40 68"><rect x="0" y="0" width="40" height="68" rx="4" fill="#6F6F4E"/><rect x="0" y="7" width="40" height="1.5" fill="#FFFDF9" opacity=".45"/><circle cx="20.0" cy="35.36" r="9" fill="#FFFDF9" opacity=".9"/></svg>Key competitors</span><span><svg viewBox="0 0 40 68"><rect x="0" y="0" width="40" height="68" rx="4" fill="#CFC0AD"/><rect x="0" y="7" width="40" height="1.5" fill="#FFFDF9" opacity=".45"/><circle cx="20.0" cy="35.36" r="9" fill="#FFFDF9" opacity=".9"/></svg>Other brands</span></div><div class="grp"><span><svg viewBox="0 0 40 68"><rect x="2" y="2" width="36" height="64" rx="6" fill="none" stroke="#43342D" stroke-width="4"/></svg>Problem to fix</span></div></div>
             </div>
-            <ol class="aud-fixes"><li><b>1</b><h4>Priority products on the bottom shelf</h4><p>Shoppers scan at eye level and miss them.</p><p class="fix">Move them to eye level.</p></li><li><b>2</b><h4>Brand split across the set</h4><p>No clear presence to shop from.</p><p class="fix">Consolidate into one block.</p></li><li><b>3</b><h4>Slow seller in prime space</h4><p>The best shelf is not earning its place.</p><p class="fix">Move it lower, based on velocity.</p></li><li><b>4</b><h4>Far from key competitors</h4><p>A premium price looks out of place.</p><p class="fix">Reposition beside key competitors.</p></li></ol>
+            <div class="aud-list"><p class="aud-head">Problem <span aria-hidden="true">&rarr;</span><span class="sr"> then </span> Fix</p><ol class="aud-fixes"><li><b>1</b><h4>Priority products hidden at the bottom</h4><p class="fix"><span aria-hidden="true">&rarr;</span> Move them up to eye level, where shoppers look.</p></li><li><b>2</b><h4>Brand scattered across the shelf</h4><p class="fix"><span aria-hidden="true">&rarr;</span> Group it together so it's easy to find.</p></li><li><b>3</b><h4>Slow seller in the best spot</h4><p class="fix"><span aria-hidden="true">&rarr;</span> Give that space to products that sell.</p></li><li><b>4</b><h4>Far from key competitors</h4><p class="fix"><span aria-hidden="true">&rarr;</span> Move it next to the brands shoppers compare it to.</p></li></ol></div>
           </div>
-          <div class="aud-score"><div class="aud-lab">Audit<br>score</div><div class="aud-scores"><div><span>Eye-level access</span><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span></div><div><span>Brand blocking</span><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></div><div><span>Priority placement</span><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></div><div><span>Adjacency</span><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span></div><div><span>Distribution</span><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span></div><div><span>Velocity</span><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span></div></div><div class="aud-total"><strong>10 / 18</strong><span>Opportunity to improve</span></div></div>
         </div>
-        <p class="cal-note">Sample shown: shelf, products and scores are invented due to confidentiality.</p>
+        <p class="cal-note">Sample shown: shelf and products are invented due to confidentiality.</p>
       </figure>
       </dialog>
     </div>
