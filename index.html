@@ -242,8 +242,10 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .side li + li { margin-top: 6px; }
 .made h2.section-label { margin-bottom: 12px; }
 .made h3 { font: italic 400 var(--step-2)/1.15 var(--display); margin-bottom: 18px; }
-.made-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.made-grid figure { display: grid; gap: 8px; }
+.made-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.made-grid figcaption span { display: block; margin-top: 3px; font: 400 .82rem/1.35 var(--body); color: var(--ink-soft); }
+@media (max-width: 620px) { .made-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.made-grid figure { display: grid; gap: 8px; align-content: start; }
 .made-photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .made-grid figcaption { font: 500 1.15rem/1.25 var(--display); }
 .made-note { margin-top: 16px; color: var(--ink-soft); }
@@ -470,19 +472,23 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h3>What I'm into off the clock, and take very seriously</h3>
         <div class="made-grid">
           <figure>
-            <img class="made-photo" src="images/personal/crochet.jpg" alt="Crochet top in progress, with a crochet hook" loading="lazy">
-            <figcaption>Crochet &amp; knitting</figcaption>
+            <img class="made-photo" src="images/personal/cards.jpg" alt="Two hand-painted cards: a seagull in sunglasses reading Happy Bird-Day, and a dachshund in a party hat with 30 balloons" loading="lazy">
+            <figcaption>Hand-painted cards<span>Designed, painted and sold individually</span></figcaption>
           </figure>
           <figure>
             <img class="made-photo" src="images/personal/3d-printing.jpg" alt="A tray of 3D-printed seasonal earrings" loading="lazy">
-            <figcaption>3D printing</figcaption>
+            <figcaption>3D-printed earrings<span>A new line in the works</span></figcaption>
           </figure>
           <figure>
             <img class="made-photo" src="images/personal/baking.jpg" alt="A homemade white frosted cake with black ribbons" loading="lazy">
-            <figcaption>Baking</figcaption>
+            <figcaption>Baking<span>Made for the people I love</span></figcaption>
+          </figure>
+          <figure>
+            <img class="made-photo" src="images/personal/crochet.jpg" alt="Crochet top in progress, with a crochet hook" loading="lazy">
+            <figcaption>Crochet &amp; knitting<span>Made for the people I love</span></figcaption>
           </figure>
         </div>
-        <p class="made-note">Each one started as a hobby and grew into commissioned work.</p>
+        <p class="made-note">Some I sell, some I make for the people I love.</p>
       </div>
     </div>
   </section>
