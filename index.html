@@ -297,6 +297,9 @@ html:has(.lav-dialog[open]) { overflow: hidden; }
 .contact h2 { font-size: var(--step-4); line-height: 1; margin-bottom: 16px; }
 .contact-lede { max-width: 58ch; font-size: var(--step-1); line-height: 1.5; margin-bottom: 22px; }
 .email-row { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; margin-bottom: 20px; }
+.phone { font: 400 clamp(1.1rem, 2.4vw, 1.4rem)/1.2 var(--body, inherit); margin: -4px 0 24px; }
+.phone a { text-decoration: none; }
+.phone a:hover { text-decoration: underline; }
 .email { font: italic 400 clamp(1.6rem, 4vw, 2.6rem)/1.2 var(--display); overflow-wrap: anywhere; }
 .copy { background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 999px; padding: 8px 16px; font: 500 .9rem/1.2 var(--body); cursor: pointer; }
 .copy:hover { background: var(--ink); color: var(--cream); }
@@ -608,6 +611,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <a class="email" id="email" href="mailto:martinaadovidio@gmail.com">martinaadovidio@gmail.com</a>
         <button class="copy" id="copy-email" type="button">Copy email</button>
       </div>
+      <p class="phone"><a href="tel:+12133928795">213.392.8795</a></p>
       <a class="btn ghost" href="Martina-DOvidio-Resume.pdf" download>Download resume</a>
       <ul class="socials">
         <li><a href="https://www.linkedin.com/in/martinadovidio/" target="_blank" rel="noopener">LinkedIn</a></li>
