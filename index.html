@@ -133,6 +133,9 @@ section { scroll-margin-top: 16px; }
 .item-wide .banner-row { aspect-ratio: auto; }
 .item-wide .item-text { flex: 1 1 0; min-width: 0; padding: 28px 40px; }
 
+.item-flip { flex-direction: row-reverse; }
+.wide-img { display: block; width: 100%; height: auto; }
+
 /* Cocoa band: commercial work */
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
 .commercial { padding-block: 64px; }
@@ -187,7 +190,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .hero-grid, .about-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
   .collage .frame-main { max-width: none; }
   .made-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .item-wide { flex-direction: column; align-items: stretch; }
+  .item-wide, .item-flip { flex-direction: column; align-items: stretch; }
   .item-wide figure { flex: none; }
   .item-wide .item-text { padding: 24px 26px 28px; }
   .creds { grid-template-columns: minmax(0, 1fr); }
@@ -304,6 +307,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <h3>Bellisio Foods / CP Foods North America</h3>
             <p>I developed the trade marketing and selling stories behind our Costco, Walmart and distributor presentations, and managed timelines for samples, food shows and retail activations.</p>
             <p class="result">Contributed to Costco growing from 1 to 5 items and about 67% in net sales.</p>
+          </div>
+        </article>
+
+        <!-- PROJECT: Fresh Prints -->
+        <article class="item item-wide item-flip">
+          <figure>
+            <img class="wide-img" src="images/freshprints/still-rising-mockup.jpg" alt="Mock-up of the front and back of the Still Rising hoodie for Shirley Tempos" loading="lazy">
+          </figure>
+          <div class="item-text">
+            <p class="meta">Campus Sales &amp; Marketing Manager</p>
+            <h3>Fresh Prints Custom Apparel</h3>
+            <p>The link between campus clubs and Fresh Prints, from shirt design through on-time delivery.</p>
+            <p class="result">Roughly 150 custom shirts for 8 to 10 student orgs.</p>
+            <p class="concept-note">Shown here: mock-up of one example, the Still Rising merch I ordered through Fresh Prints as Shirley Tempos PR manager.</p>
           </div>
         </article>
 
@@ -438,7 +455,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </div>
         <div class="job">
           <p class="dates">Jul 2022 – May 2023</p>
-          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p><p>Managed custom apparel orders for around 8 to 10 student organizations.</p></div>
+          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p></div>
         </div>
       </div>
 
