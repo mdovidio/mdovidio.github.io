@@ -643,3 +643,15 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     setTimeout(function () { window.location.href = 'mailto:madovidio@icloud.com'; }, 300);
   });
 </script>
+<script>
+  // A refresh always starts at the top. Links shared to a section still go to that section.
+  (function () {
+    var nav = performance.getEntriesByType('navigation')[0];
+    if (!nav || nav.type !== 'reload') return;
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    function toTop() { window.scrollTo({ top: 0, behavior: 'instant' }); }
+    toTop();
+    window.addEventListener('load', toTop);
+  })();
+</script>
