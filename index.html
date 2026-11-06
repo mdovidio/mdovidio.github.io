@@ -164,7 +164,7 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .side li + li { margin-top: 4px; }
 .made { margin-top: 44px; }
 .made h3 { font: italic 400 var(--step-2)/1.15 var(--display); margin-bottom: 18px; }
-.made-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.made-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .made-grid figure { display: grid; gap: 8px; }
 .made-photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .made-grid figcaption { font: 500 1.15rem/1.25 var(--display); }
@@ -198,7 +198,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 @media (max-width: 860px) {
   .hero-grid, .about-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
   .collage .frame-main { max-width: none; }
-  .made-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .made-grid { gap: 8px; }
+  .made-grid figcaption { font-size: 1rem; }
   .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 24px; }
   .item-wide { flex-direction: column; align-items: stretch; }
   .item-wide figure { flex: none; }
@@ -369,10 +370,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <figure>
             <img class="made-photo" src="images/personal/baking.jpg" alt="A homemade white frosted cake with black ribbons" loading="lazy">
             <figcaption>Baking &amp; cooking</figcaption>
-          </figure>
-          <figure>
-            <img class="made-photo" src="images/personal/sustainable.jpg" alt="A market table of secondhand glassware and ceramics" loading="lazy">
-            <figcaption>Sustainable living</figcaption>
           </figure>
         </div>
         <p class="made-note">Plus DIY projects, yoga and exploring new cultures.</p>
