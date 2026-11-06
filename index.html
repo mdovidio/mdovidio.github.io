@@ -234,13 +234,13 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .about { padding-block: 64px 0; }
 .about .bio { max-width: 68ch; }
 .personal { padding-block: 64px; }
-.personal-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 32px clamp(32px, 6vw, 80px); }
 .about-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 32px clamp(32px, 6vw, 80px); }
 .about h2 { font-size: var(--step-3); margin-bottom: 18px; }
 .bio { display: grid; gap: 14px; max-width: 62ch; }
 .side h3, .creds h3 { font: 500 0.76rem/1.3 var(--body); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
 .side ul { list-style: disc; padding-left: 1.2em; }
 .side li + li { margin-top: 6px; }
+.made h2.section-label { margin-bottom: 12px; }
 .made h3 { font: italic 400 var(--step-2)/1.15 var(--display); margin-bottom: 18px; }
 .made-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .made-grid figure { display: grid; gap: 8px; }
@@ -257,7 +257,7 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .job h3 { font-size: 1.5rem; margin-bottom: 2px; }
 .job .title { font-weight: 500; }
 .job p + p { max-width: 72ch; }
-.creds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--oat); }
+.creds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--oat); }
 .creds li + li { margin-top: 6px; }
 .creds .group + .group { margin-top: 10px; }
 .tools-block { grid-column: 1 / -1; }
@@ -283,7 +283,7 @@ footer { padding-block: 18px; background: var(--cocoa); color: var(--on-cocoa-so
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
 
 @media (max-width: 860px) {
-  .hero-grid, .about-grid, .personal-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid, .about-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
   .collage .frame-main { max-width: none; }
   .made-grid { gap: 8px; }
   .made-grid figcaption { font-size: 1rem; }
@@ -313,7 +313,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <ul class="submenu" id="work-menu">
             <li><a href="#work">Creative marketing</a></li>
             <li><a href="#activation">Brand and retail activation</a></li>
-            <li><a href="#personal">Personal projects</a></li>
+            <li><a href="#personal">Passion projects</a></li>
           </ul>
         </li>
         <li><a href="#experience">Experience</a></li>
@@ -464,8 +464,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   </section>
 
   <section class="personal" id="personal">
-    <div class="wrap personal-grid">
+    <div class="wrap">
       <div class="made">
+        <h2 class="section-label">Passion projects</h2>
         <h3>What I'm into off the clock, and take very seriously</h3>
         <div class="made-grid">
           <figure>
@@ -478,21 +479,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </figure>
           <figure>
             <img class="made-photo" src="images/personal/baking.jpg" alt="A homemade white frosted cake with black ribbons" loading="lazy">
-            <figcaption>Baking &amp; cooking</figcaption>
+            <figcaption>Baking</figcaption>
           </figure>
         </div>
-        <p class="made-note">Plus DIY projects, yoga and exploring new cultures.</p>
+        <p class="made-note">Each one started as a hobby and grew into commissioned work.</p>
       </div>
-        <div class="side">
-          <h3>Where I've been</h3>
-          <ul>
-            <li>From North Carolina, now in New York City</li>
-            <li>Moved 9 times including Germany, Michigan, and Los Angeles</li>
-            <li>Studied and worked in Italy and in Medellín, Colombia</li>
-            <li>Citizen of the US, Italy and Canada</li>
-            <li>English (native), Italian (intermediate)</li>
-          </ul>
-        </div>
     </div>
   </section>
 
@@ -541,6 +532,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <li>Founder &amp; President, Italian Club at Elon</li>
             <li>PR Manager, Shirley Tempos A Cappella</li>
             <li>Wharton Digital Marketing Certificate (in progress)</li>
+          </ul>
+        </div>
+        <div class="side">
+          <h3>Where I've been</h3>
+          <ul>
+            <li>From North Carolina, now in New York City</li>
+            <li>Moved 9 times including Germany, Michigan, and Los Angeles</li>
+            <li>Studied and worked in Italy and in Medellín, Colombia</li>
+            <li>Citizen of the US, Italy and Canada</li>
+            <li>English (native), Italian (intermediate)</li>
           </ul>
         </div>
         <div class="tools-block">
