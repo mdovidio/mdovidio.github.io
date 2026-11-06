@@ -216,13 +216,15 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 }
 
 /* About */
-.about { padding-block: 64px; }
+.about { padding-block: 64px 0; }
+.about .bio { max-width: 68ch; }
+.personal { padding-block: 64px; }
+.personal-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 32px clamp(32px, 6vw, 80px); }
 .about-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 32px clamp(32px, 6vw, 80px); }
 .about h2 { font-size: var(--step-3); margin-bottom: 18px; }
 .bio { display: grid; gap: 14px; max-width: 62ch; }
 .side h3, .creds h3 { font: 500 0.76rem/1.3 var(--body); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
 .side li + li { margin-top: 4px; }
-.made { margin-top: 44px; }
 .made h3 { font: italic 400 var(--step-2)/1.15 var(--display); margin-bottom: 18px; }
 .made-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .made-grid figure { display: grid; gap: 8px; }
@@ -265,7 +267,7 @@ footer { padding-block: 18px; background: var(--cocoa); color: var(--on-cocoa-so
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
 
 @media (max-width: 860px) {
-  .hero-grid, .about-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid, .about-grid, .personal-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
   .collage .frame-main { max-width: none; }
   .made-grid { gap: 8px; }
   .made-grid figcaption { font-size: 1rem; }
@@ -289,8 +291,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <a class="logo" href="#top" aria-label="Martina D'Ovidio, back to top"><img src="images/logo/md-logo.svg" alt="" width="87" height="38"></a>
     <nav aria-label="Main">
       <ul>
-        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -330,6 +332,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </ul>
     </div>
   </div>
+
+  <section class="about" id="about">
+    <div class="wrap">
+          <h2>Hi, I'm Martina!</h2>
+          <div class="bio">
+            <p>I've always loved the mix of creativity, people and problem-solving. Working in consumer goods taught me how brands operate behind the scenes. Events, social media and visual marketing showed me what I enjoy most: bringing ideas to life.</p>
+            <p>Now I'm growing further into brand and experiential marketing, where my commercial background and my creative side both get used.</p>
+          </div>
+    </div>
+  </section>
 
   <section class="work" id="work">
     <div class="wrap">
@@ -421,28 +433,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="about-grid">
-        <div>
-          <h2>Hi, I'm Martina!</h2>
-          <div class="bio">
-            <p>I've always loved the mix of creativity, people and problem-solving. Working in consumer goods taught me how brands operate behind the scenes. Events, social media and visual marketing showed me what I enjoy most: bringing ideas to life.</p>
-            <p>Now I'm growing further into brand and experiential marketing, where my commercial background and my creative side both get used.</p>
-          </div>
-        </div>
-        <div class="side">
-          <h3>Where I've been</h3>
-          <ul>
-            <li>From North Carolina, now in New York City</li>
-            <li>Moved 9 times including Germany, Michigan, and Los Angeles</li>
-            <li>Studied and worked in Italy and in Medellín, Colombia</li>
-            <li>Citizen of the US, Italy and Canada</li>
-            <li>English (native), Italian (intermediate)</li>
-          </ul>
-        </div>
-      </div>
-
+  <section class="personal">
+    <div class="wrap personal-grid">
       <div class="made">
         <h3>What I'm into off the clock, and take very seriously</h3>
         <div class="made-grid">
@@ -461,6 +453,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </div>
         <p class="made-note">Plus DIY projects, yoga and exploring new cultures.</p>
       </div>
+        <div class="side">
+          <h3>Where I've been</h3>
+          <ul>
+            <li>From North Carolina, now in New York City</li>
+            <li>Moved 9 times including Germany, Michigan, and Los Angeles</li>
+            <li>Studied and worked in Italy and in Medellín, Colombia</li>
+            <li>Citizen of the US, Italy and Canada</li>
+            <li>English (native), Italian (intermediate)</li>
+          </ul>
+        </div>
     </div>
   </section>
 
