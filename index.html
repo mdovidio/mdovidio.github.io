@@ -129,9 +129,7 @@ section { scroll-margin-top: 16px; }
 .post-grid img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .concept-note { color: var(--ink-soft); font-size: 0.9rem; }
 
-.fh-grid { display: grid; grid-template-rows: 1fr 1fr; gap: 4px; aspect-ratio: 1; }
-.fh-grid img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 50% 45%; }
-.fh-grid img:last-child { object-position: 50% 62%; }
+.site-shot { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; }
 
 .banner-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; align-items: center; aspect-ratio: 480 / 340; padding: 12px; background: var(--shell); }
 .banner-row img { display: block; width: 100%; height: auto; }
@@ -141,8 +139,6 @@ section { scroll-margin-top: 16px; }
 .item-wide .banner-row { aspect-ratio: auto; }
 .item-wide .item-text { flex: 1 1 0; min-width: 0; padding: 28px 40px; }
 
-.item-flip { flex-direction: row-reverse; }
-.wide-img { display: block; width: 100%; height: auto; }
 
 /* Cocoa band: commercial work */
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
@@ -199,7 +195,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .collage .frame-main { max-width: none; }
   .made-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 24px; }
-  .item-wide, .item-flip { flex-direction: column; align-items: stretch; }
+  .item-wide { flex-direction: column; align-items: stretch; }
   .item-wide figure { flex: none; }
   .item-wide .item-text { padding: 24px 26px 28px; }
   .creds { grid-template-columns: minmax(0, 1fr); }
@@ -306,29 +302,13 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <!-- PROJECT: Full House Vision -->
         <article class="item">
           <figure>
-            <div class="fh-grid">
-              <img src="images/fullhouse/group.jpg" alt="Guests playing poker at a Full House Vision event" loading="lazy">
-              <img src="images/fullhouse/pamphlet.jpg" alt="Printed event programs on a table at a Full House Vision poker night" loading="lazy">
-            </div>
+            <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener" aria-label="Visit the Full House Vision website"><img class="site-shot" src="images/fullhouse/website.jpg" alt="Homepage of the Full House Vision website" loading="lazy"></a>
           </figure>
           <div class="item-text">
             <p class="meta">Marketing and Events Coordinator, part-time</p>
             <h3>Full House Vision</h3>
-            <p>Corporate poker events in NYC. I partner with the founder on all the marketing, from organizing the events to building the <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">website</a>.</p>
-          </div>
-        </article>
-
-        <!-- PROJECT: Fresh Prints -->
-        <article class="item item-wide item-flip">
-          <figure>
-            <img class="wide-img" src="images/freshprints/still-rising-mockup.jpg" alt="Mock-up of the front and back of the Still Rising hoodie for Shirley Tempos" loading="lazy">
-          </figure>
-          <div class="item-text">
-            <p class="meta">Campus Sales &amp; Marketing Manager</p>
-            <h3>Fresh Prints Custom Apparel</h3>
-            <p>The link between campus clubs and Fresh Prints, from shirt design through on-time delivery.</p>
-            <p class="result">Roughly 150 custom shirts for 8 to 10 student orgs.</p>
-            <p class="concept-note">Shown here: mock-up of one example, the Still Rising merch I processed as Shirley Tempos A Cappella Public Relations manager.</p>
+            <p>The website I made for Full House Vision, where I partner with the founder on all things marketing.</p>
+            <p><a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">Visit the website</a></p>
           </div>
         </article>
 
@@ -455,7 +435,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </div>
         <div class="job">
           <p class="dates">Jul 2022 – May 2023</p>
-          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p></div>
+          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p><p>Managed roughly 150 custom shirts for 8 to 10 student orgs.</p></div>
         </div>
       </div>
 
