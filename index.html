@@ -125,6 +125,9 @@ section { scroll-margin-top: 16px; }
 .fh-grid img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 50% 45%; }
 .fh-grid img:last-child { object-position: 50% 62%; }
 
+.banner-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; align-items: center; aspect-ratio: 480 / 340; padding: 12px; background: var(--shell); }
+.banner-row img { display: block; width: 100%; height: auto; }
+
 /* Cocoa band: commercial work */
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
 .commercial { padding-block: 64px; }
@@ -282,22 +285,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <!-- PROJECT: Bellisio -->
         <article class="item">
           <figure>
-            <svg viewBox="0 0 480 340" role="img" aria-label="Illustration of a stack of presentation slides">
-              <rect width="480" height="340" fill="#F4E0D9"/>
-              <g stroke="#624C41" stroke-width="1.8">
-                <rect x="108" y="38" width="290" height="180" fill="#DDB9AD" transform="rotate(5 253 128)"/>
-                <rect x="94" y="70" width="290" height="180" fill="#F1E7DB" transform="rotate(-3 239 160)"/>
-                <rect x="84" y="104" width="290" height="180" fill="#FFFDF9"/>
-              </g>
-              <text x="108" y="156" font-size="35" font-style="italic" fill="#43342D" class="svg-serif">The selling story</text>
-              <g fill="#DDCFBE"><rect x="108" y="178" width="186" height="5"/><rect x="108" y="196" width="156" height="5"/><rect x="108" y="214" width="172" height="5"/></g>
-            </svg>
+            <div class="banner-row">
+              <img src="images/bellisio/authentic-asia.jpg" alt="Authentic Asia promotional banner" loading="lazy">
+              <img src="images/bellisio/michelinas.jpg" alt="Michelina's promotional banner" loading="lazy">
+              <img src="images/bellisio/white-castle.jpg" alt="White Castle Castle Bites promotional banner" loading="lazy">
+            </div>
           </figure>
           <div class="item-text">
             <p class="meta">Sales &amp; Projects Coordinator</p>
             <h3>Bellisio Foods / CP Foods North America</h3>
-            <p>Selling stories and promotional materials for Costco, Walmart and distributors, plus samples and food show prep.</p>
-            <p class="result">About 67% net sales growth at Costco, a team result my work supported.</p>
+            <p>I developed the trade marketing and selling stories behind our Costco, Walmart and distributor presentations, and managed timelines for samples, food shows and retail activations.</p>
+            <p class="result">Contributed to Costco growing from 1 to 5 items and about 67% in net sales.</p>
           </div>
         </article>
 
