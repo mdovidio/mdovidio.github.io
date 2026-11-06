@@ -140,6 +140,12 @@ section { scroll-margin-top: 16px; }
 .item-wide .item-text { flex: 1 1 0; min-width: 0; padding: 28px 40px; }
 
 
+h2.section-label, .section-head h2.section-label, .experience h2.section-label {
+  font: 500 0.76rem/1.3 var(--body); letter-spacing: 0.14em; text-transform: uppercase;
+}
+.section-head:has(.section-label) { margin-bottom: 22px; }
+.experience h2.section-label { margin-bottom: 14px; }
+
 /* Cocoa band: commercial work */
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
 .commercial { padding-block: 64px; }
@@ -148,7 +154,6 @@ section { scroll-margin-top: 16px; }
 .commercial-grid article { display: grid; gap: 13px; align-content: start; min-width: 0; }
 .commercial-grid h3 { font-size: var(--step-2); }
 .commercial-grid .meta { color: var(--on-cocoa-soft); }
-.commercial-grid figcaption { margin-top: 7px; font-size: 0.76rem; color: var(--on-cocoa-soft); }
 
 /* About */
 .about { padding-block: 64px; }
@@ -229,7 +234,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div class="hero-copy">
         <h1>Martina <em>D'Ovidio</em></h1>
         <p class="hero-line">I care about how a brand feels and whether it sells.</p>
-        <p class="role">Brand &amp; Marketing Professional in New York City</p>
+        <p class="role">Brand and experiential marketer in New York City</p>
         <div class="actions">
           <a class="btn" href="#contact">Email me about a role</a>
           <a class="btn ghost" href="Martina-DOvidio-Resume.pdf" download>Download resume</a>
@@ -259,8 +264,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <section class="work" id="work">
     <div class="wrap">
       <div class="section-head">
-        <p class="label">Selected work</p>
-        <h2>Ideas, made real</h2>
+        <h2 class="section-label">Selected work</h2>
       </div>
 
       <div class="shop">
@@ -275,9 +279,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             </div>
           </figure>
           <div class="item-text">
-            <p class="meta">Sales &amp; Projects Coordinator</p>
-            <h3>Bellisio Foods / CP Foods North America</h3>
-            <p>I developed the trade marketing and selling stories behind our Costco, Walmart and distributor presentations, and managed timelines for samples, food shows and retail activations.</p>
+            <h3>Bellisio Foods</h3>
+            <p class="meta">Retail banners and selling stories</p>
             <p class="result">Contributed to Costco growing from 1 to 5 items and about 67% in net sales.</p>
           </div>
         </article>
@@ -293,9 +296,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             </div>
           </figure>
           <div class="item-text">
-            <p class="meta">Visual Marketing &amp; Social Media, freelance</p>
-            <h3>Ivester Jackson–Christie's International Real Estate</h3>
-            <p>Anything visual: open house and closed deal content for Instagram, TikTok and print, plus some photo and video.</p>
+            <h3>Ivester Jackson&ndash;Christie's International Real Estate</h3>
+            <p class="meta">Social and print content</p>
           </div>
         </article>
 
@@ -305,10 +307,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener" aria-label="Visit the Full House Vision website"><img class="site-shot" src="images/fullhouse/website.jpg" alt="Homepage of the Full House Vision website" loading="lazy"></a>
           </figure>
           <div class="item-text">
-            <p class="meta">Marketing and Events Coordinator, part-time</p>
             <h3>Full House Vision</h3>
-            <p>The website I made for Full House Vision, where I partner with the founder on all things marketing.</p>
-            <p><a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">Visit the website</a></p>
+            <p class="meta">Website and event marketing, with the founder. <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">Visit the website</a></p>
           </div>
         </article>
 
@@ -320,43 +320,14 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <section class="commercial band-cocoa">
     <div class="wrap">
       <div class="section-head">
-        <p class="label">The commercial side</p>
-        <h2>I know what happens after the idea leaves the room</h2>
-        <p>My full-time work at Lavazza Group North America.</p>
+        <h2 class="section-label">Lavazza Group</h2>
       </div>
       <div class="commercial-grid">
         <article>
-          <figure>
-            <svg viewBox="0 0 520 240" role="img" aria-label="Illustration of products arranged on a retail shelf">
-              <rect width="520" height="240" fill="#FBF6EF"/>
-              <g fill="#624C41"><rect x="30" y="106" width="460" height="4"/><rect x="30" y="206" width="460" height="4"/></g>
-              <g stroke="#624C41" stroke-width="1.5">
-                <rect x="46" y="38" width="48" height="68" fill="#F4E0D9"/><rect x="94" y="38" width="48" height="68" fill="#F4E0D9"/><rect x="142" y="38" width="48" height="68" fill="#F4E0D9"/>
-                <rect x="190" y="50" width="60" height="56" fill="#DDCFBE"/><rect x="250" y="50" width="60" height="56" fill="#DDCFBE"/>
-                <rect x="310" y="30" width="42" height="76" fill="#DDB9AD"/><rect x="352" y="30" width="42" height="76" fill="#DDB9AD"/><rect x="394" y="30" width="42" height="76" fill="#DDB9AD"/>
-                <rect x="46" y="144" width="70" height="62" fill="#DDCFBE"/><rect x="116" y="144" width="70" height="62" fill="#DDCFBE"/>
-                <rect x="186" y="132" width="52" height="74" fill="#DDB9AD"/>
-                <rect x="238" y="138" width="56" height="68" fill="#F4E0D9"/><rect x="294" y="138" width="56" height="68" fill="#F4E0D9"/><rect x="350" y="138" width="56" height="68" fill="#F4E0D9"/><rect x="406" y="138" width="56" height="68" fill="#F4E0D9"/>
-              </g>
-            </svg>
-            <figcaption>Illustration, not real shelf data.</figcaption>
-          </figure>
-          <h3>Retail shelf and promotional analysis at Kroger</h3>
-          <p>How our products show up in store, turned into clear next steps for strategy, sales and marketing.</p>
+          <h3>Kroger shelf and promotional analysis</h3>
         </article>
         <article>
-          <figure>
-            <svg viewBox="0 0 520 240" role="img" aria-label="Illustration of two soft lines labeled shipped and consumed">
-              <rect width="520" height="240" fill="#F4E0D9"/>
-              <path d="M36 172 C110 100 170 100 236 134 S372 188 484 66" fill="none" stroke="#624C41" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M36 130 C120 162 182 164 252 112 S402 100 484 124" fill="none" stroke="#B98A7B" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="392" y="56" font-size="26" font-style="italic" fill="#43342D" class="svg-serif">Shipped</text>
-              <text x="382" y="154" font-size="26" font-style="italic" fill="#43342D" class="svg-serif">Consumed</text>
-            </svg>
-            <figcaption>Illustration, not real data.</figcaption>
-          </figure>
-          <h3>A shared view of shipments and consumption</h3>
-          <p>A dashboard I co-developed with my team, now part of monthly business reviews.</p>
+          <h3>Shipment vs. consumption dashboard</h3>
         </article>
       </div>
     </div>
@@ -385,7 +356,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </div>
 
       <div class="made">
-        <h3>What I make off the clock, and take very seriously</h3>
+        <h3>What I'm into off the clock, and take very seriously</h3>
         <div class="made-grid">
           <figure>
             <img class="made-photo" src="images/personal/crochet.jpg" alt="Crochet top in progress, with a crochet hook" loading="lazy">
@@ -411,7 +382,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
   <section class="experience" id="experience">
     <div class="wrap">
-      <h2>Experience</h2>
+      <h2 class="section-label">Experience</h2>
       <div>
         <div class="job">
           <p class="dates">Apr 2025 – now</p>
@@ -435,7 +406,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </div>
         <div class="job">
           <p class="dates">Jul 2022 – May 2023</p>
-          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p><p>Managed roughly 150 custom shirts for 8 to 10 student orgs.</p></div>
+          <div><h3>Fresh Prints</h3><p class="title">Campus Sales &amp; Marketing Manager</p></div>
         </div>
       </div>
 
@@ -458,7 +429,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </div>
         <div>
           <h3>Tools I've used</h3>
-          <p class="group">Canva, Adobe Express, PowerPoint, Notion, AI tools, Excel, Power BI, NielsenIQ, Circana</p>
+          <p class="group">Canva, Adobe Express, PowerPoint, Notion, AI tools, NielsenIQ, Circana</p>
         </div>
       </div>
     </div>
@@ -467,7 +438,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>Let's <em>talk</em></h2>
-      <p class="contact-lede">I'm looking for full-time brand and experiential marketing roles.</p>
+      <p class="contact-lede">Open to full-time brand and experiential marketing roles.</p>
       <div class="email-row">
         <a class="email" id="email" href="mailto:madovidio@icloud.com">madovidio@icloud.com</a>
         <button class="copy" id="copy-email" type="button">Copy email</button>
