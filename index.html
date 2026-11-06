@@ -165,7 +165,7 @@ section { scroll-margin-top: 16px; }
 .made h3 { font: italic 400 var(--step-2)/1.15 var(--display); margin-bottom: 18px; }
 .made-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .made-grid figure { display: grid; gap: 8px; }
-.made-grid .pic { position: relative; aspect-ratio: 1; display: grid; place-items: center; padding: 22%; }
+.made-photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .made-grid figcaption { font: 500 1.15rem/1.25 var(--display); }
 .made-note { margin-top: 16px; color: var(--ink-soft); }
 
@@ -408,28 +408,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h3>What I make off the clock, and take very seriously</h3>
         <div class="made-grid">
           <figure>
-            <div class="pic" style="background: var(--shell)">
-              <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#624C41" stroke-width="2"><circle cx="50" cy="50" r="38"/><path d="M18 34 C42 40 66 58 76 78"/><path d="M14 50 C36 54 56 68 64 86"/><path d="M30 18 C54 26 78 44 87 62"/><path d="M50 12 C42 34 42 62 50 88" /></g></svg>
-            </div>
+            <img class="made-photo" src="images/personal/crochet.jpg" alt="Crochet top in progress, with a crochet hook" loading="lazy">
             <figcaption>Crochet &amp; knitting</figcaption>
           </figure>
           <figure>
-            <div class="pic" style="background: var(--sand)">
-              <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#624C41" stroke-width="2" stroke-linejoin="round"><path d="M50 14 L86 32 V70 L50 88 L14 70 V32 Z"/><path d="M14 32 L50 50 L86 32"/><path d="M50 50 V88"/></g></svg>
-            </div>
+            <img class="made-photo" src="images/personal/3d-printing.jpg" alt="A tray of 3D-printed seasonal earrings" loading="lazy">
             <figcaption>3D printing</figcaption>
           </figure>
           <figure>
-            <div class="pic" style="background: var(--rose)">
-              <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#43342D" stroke-width="2" stroke-linejoin="round"><path d="M14 56 H86 V84 H14 Z"/><path d="M14 56 C14 40 86 40 86 56"/><path d="M50 40 V24"/><path d="M50 24 C44 18 46 14 50 10 C54 14 56 18 50 24"/></g></svg>
-            </div>
+            <img class="made-photo" src="images/personal/baking.jpg" alt="A homemade white frosted cake with black ribbons" loading="lazy">
             <figcaption>Baking &amp; cooking</figcaption>
           </figure>
           <figure>
-            <div class="pic" style="background: var(--oat)">
-              <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#43342D" stroke-width="2" stroke-linejoin="round"><path d="M10 32 H34 L40 20 H60 L66 32 H90 V80 H10 Z"/><circle cx="50" cy="55" r="17"/></g></svg>
-            </div>
-            <figcaption>Photography</figcaption>
+            <img class="made-photo" src="images/personal/sustainable.jpg" alt="A market table of secondhand glassware and ceramics" loading="lazy">
+            <figcaption>Sustainable living</figcaption>
           </figure>
         </div>
         <p class="made-note">Plus DIY projects, yoga and Pilates.</p>
