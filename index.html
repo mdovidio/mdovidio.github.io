@@ -58,7 +58,8 @@ svg { display: block; width: 100%; height: auto; }
 /* Nav */
 .nav { padding-block: 18px; }
 .nav .wrap { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; justify-content: space-between; }
-.logo { font: italic 500 1.5rem/1 var(--display); text-decoration: none; }
+.logo { display: block; text-decoration: none; }
+.logo img { display: block; width: auto; height: 38px; }
 .nav ul { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 0.95rem; }
 .nav li a { text-decoration: none; }
 .nav li a:hover { text-decoration: underline; }
@@ -217,7 +218,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Martina D'Ovidio, back to top">M. D'Ovidio</a>
+    <a class="logo" href="#top" aria-label="Martina D'Ovidio, back to top"><img src="images/logo/md-logo.svg" alt="" width="87" height="38"></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#work">Work</a></li>
