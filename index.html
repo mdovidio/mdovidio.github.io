@@ -121,6 +121,10 @@ section { scroll-margin-top: 16px; }
 .post-grid img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
 .concept-note { color: var(--ink-soft); font-size: 0.9rem; }
 
+.fh-grid { display: grid; grid-template-rows: 1fr 1fr; gap: 4px; aspect-ratio: 1; }
+.fh-grid img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 50% 45%; }
+.fh-grid img:last-child { object-position: 50% 62%; }
+
 /* Cocoa band: commercial work */
 .band-cocoa { background: var(--cocoa); color: var(--cream); }
 .commercial { padding-block: 64px; }
@@ -173,6 +177,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 @media (max-width: 860px) {
   .hero-grid, .about-grid, .commercial-grid, .shop { grid-template-columns: minmax(0, 1fr); }
+  .collage .frame-main { max-width: none; }
   .made-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .creds { grid-template-columns: minmax(0, 1fr); }
   .job { grid-template-columns: minmax(0, 1fr); }
@@ -262,24 +267,15 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <!-- PROJECT: Full House Vision -->
         <article class="item">
           <figure>
-            <svg viewBox="0 0 480 340" role="img" aria-label="Illustration of a playing card and a poker chip">
-              <rect width="480" height="340" fill="#F1E7DB"/>
-              <g transform="rotate(-9 200 170)">
-                <rect x="118" y="44" width="172" height="248" rx="10" fill="#FFFDF9" stroke="#624C41" stroke-width="1.8"/>
-                <rect x="129" y="55" width="150" height="226" rx="5" fill="none" stroke="#DDB9AD" stroke-width="1.5"/>
-                <text x="142" y="92" font-size="32" fill="#43342D" class="svg-serif">A</text>
-                <path d="M204 126 C226 154 248 166 248 190 C248 209 224 215 211 198 C212 214 215 224 224 232 H184 C193 224 196 214 197 198 C184 215 160 209 160 190 C160 166 182 154 204 126 Z" fill="#624C41"/>
-              </g>
-              <circle cx="346" cy="222" r="72" fill="#DDB9AD"/>
-              <circle cx="346" cy="222" r="63" fill="none" stroke="#FBF6EF" stroke-width="10" stroke-dasharray="20 16.8"/>
-              <circle cx="346" cy="222" r="42" fill="#FBF6EF"/>
-              <text x="346" y="233" text-anchor="middle" font-size="31" font-style="italic" fill="#43342D" class="svg-serif">FH</text>
-            </svg>
+            <div class="fh-grid">
+              <img src="images/fullhouse/group.jpg" alt="Guests playing poker at a Full House Vision event" loading="lazy">
+              <img src="images/fullhouse/pamphlet.jpg" alt="Printed event programs on a table at a Full House Vision poker night" loading="lazy">
+            </div>
           </figure>
           <div class="item-text">
             <p class="meta">Marketing and Events Coordinator, part-time</p>
             <h3>Full House Vision</h3>
-            <p>Corporate poker events in NYC. I help from planning through on-site, plus branded materials, social and the <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">website</a>.</p>
+            <p>Corporate poker events in NYC. I partner with the founder on all the marketing, from organizing the events to building the <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">website</a>.</p>
           </div>
         </article>
 
