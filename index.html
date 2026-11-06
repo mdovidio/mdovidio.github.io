@@ -63,11 +63,22 @@ svg { display: block; width: 100%; height: auto; }
 .nav ul { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 0.95rem; }
 .nav li a { text-decoration: none; }
 .nav li a:hover { text-decoration: underline; }
+.has-menu { position: relative; }
+.menu-top { white-space: nowrap; }
+.caret { font-size: .7em; }
+@media (hover: none) { .caret { display: none; } }
+.nav .submenu { display: none; position: absolute; top: 100%; left: -14px; z-index: 60; width: max-content; margin-top: 8px; padding: 8px 0; background: var(--paper); border: 1px solid var(--oat); border-radius: 8px; box-shadow: 0 8px 24px rgba(67, 52, 45, .12); }
+.submenu::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
+.submenu a { display: block; padding: 7px 14px; }
+.has-menu.open .submenu { display: block; }
+@media (hover: hover) {
+  .has-menu:not(.dismissed):hover .submenu, .has-menu:not(.dismissed):focus-within .submenu { display: block; }
+}
 @media (max-width: 480px) {
   .nav { padding-block: 12px; }
   .nav .wrap { flex-wrap: nowrap; gap: 12px; }
   .logo img { height: 30px; }
-  .nav ul { flex-wrap: nowrap; gap: 14px; font-size: 0.86rem; }
+  .nav ul { flex-wrap: nowrap; gap: 11px; font-size: 0.84rem; }
 }
 
 /* Hero */
@@ -297,7 +308,14 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <nav aria-label="Main">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li class="has-menu">
+          <a class="menu-top" href="#work" aria-haspopup="true" aria-expanded="false" aria-controls="work-menu">Work<span class="caret" aria-hidden="true"> &#9662;</span></a>
+          <ul class="submenu" id="work-menu">
+            <li><a href="#work">Creative marketing</a></li>
+            <li><a href="#activation">Brand and retail activation</a></li>
+            <li><a href="#personal">Personal projects</a></li>
+          </ul>
+        </li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -404,7 +422,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </section>
 
-  <section class="commercial band-cocoa">
+  <section class="commercial band-cocoa" id="activation">
     <div class="wrap">
       <div class="section-head">
         <h2 class="section-label">Brand and retail activation</h2>
@@ -444,7 +462,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
   </section>
 
-  <section class="personal">
+  <section class="personal" id="personal">
     <div class="wrap personal-grid">
       <div class="made">
         <h3>What I'm into off the clock, and take very seriously</h3>
@@ -580,4 +598,34 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       }
     });
   })();
+</script>
+<script>
+(function () {
+  var item = document.querySelector('.has-menu');
+  var top = item.querySelector('.menu-top');
+  function setOpen(open) {
+    item.classList.toggle('open', open);
+    top.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function dismiss(link) {
+    setOpen(false);
+    item.classList.add('dismissed');
+    link.blur();
+  }
+  // Devices with hover jump straight to the work. Touch devices open the menu instead.
+  top.addEventListener('click', function (e) {
+    if (window.matchMedia('(hover: hover)').matches) {
+      dismiss(top);
+    } else {
+      e.preventDefault();
+      setOpen(!item.classList.contains('open'));
+    }
+  });
+  item.querySelectorAll('.submenu a').forEach(function (a) {
+    a.addEventListener('click', function () { dismiss(a); });
+  });
+  item.addEventListener('mouseleave', function () { item.classList.remove('dismissed'); });
+  document.addEventListener('click', function (e) { if (!item.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setOpen(false); top.blur(); } });
+})();
 </script>
