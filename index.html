@@ -162,6 +162,10 @@ section { scroll-margin-top: 16px; }
 .item-wide .item-text { flex: 1 1 0; min-width: 0; padding: 28px 40px; }
 .item-wide.item-mirror { flex-direction: row-reverse; }
 .item-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.stat { display: grid; gap: 4px; padding: 14px 18px 16px; background: var(--shell); }
+.stat b { font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 3.4vw, 2.7rem); line-height: 1; }
+.stat span { font-size: 0.86rem; color: var(--ink-soft); }
 
 
 h2.section-label, .section-head h2.section-label, .experience h2.section-label {
@@ -461,8 +465,12 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </figure>
           <div class="item-text">
             <h3>Celebrating the Arts</h3>
-            <p class="meta">Directed and edited a fundraising film rallying support for a school&#8217;s theatre, music and visual arts programs.</p>
-            <p class="result">Premiered at the gala to 150+ guests, including board members, school leadership, parents and local businesses.</p>
+            <p class="meta">Took a school&#8217;s fine arts fundraising ask from concept to final film, turning gala guests into donors.</p>
+            <div class="stats">
+              <p class="stat"><b>$15K+</b><span>Raised on gala night</span></p>
+              <p class="stat"><b>100+</b><span>Gala attendees</span></p>
+            </div>
+            <p class="meta">Premiered to families, school leadership, board members and local business partners.</p>
           </div>
         </article>
 
