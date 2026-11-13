@@ -160,6 +160,8 @@ section { scroll-margin-top: 16px; }
 .item-wide figure { flex: 0 0 56%; min-width: 0; }
 .item-wide .banner-row { aspect-ratio: auto; }
 .item-wide .item-text { flex: 1 1 0; min-width: 0; padding: 28px 40px; }
+.item-wide.item-mirror { flex-direction: row-reverse; }
+.item-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
 
 
 h2.section-label, .section-head h2.section-label, .experience h2.section-label {
@@ -320,7 +322,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .made-grid { gap: 8px; }
   .made-grid figcaption { font-size: 1rem; }
   .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 24px; }
-  .item-wide { flex-direction: column; align-items: stretch; }
+  .item-wide, .item-wide.item-mirror { flex-direction: column; align-items: stretch; }
   .item-wide figure { flex: none; }
   .item-wide .item-text { padding: 24px 26px 28px; }
   .creds { grid-template-columns: minmax(0, 1fr); }
@@ -447,6 +449,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <div class="item-text">
             <h3>Full House Vision</h3>
             <p class="meta">Website creation and event marketing. <a href="https://www.fullhousevision.com/" target="_blank" rel="noopener">Visit the page</a></p>
+          </div>
+        </article>
+
+        <!-- PROJECT: Fine Arts gala video -->
+        <article class="item item-wide item-mirror item-video">
+          <figure>
+            <video controls preload="none" playsinline poster="images/gala/poster.jpg" aria-label="Celebrating the Arts fundraising film">
+              <source src="videos/fine-arts-gala.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="item-text">
+            <h3>Celebrating the Arts</h3>
+            <p class="meta">Directed and edited a fundraising film rallying support for a school&#8217;s theatre, music and visual arts programs.</p>
+            <p class="result">Premiered at the gala to 150+ guests, including board members, school leadership, parents and local businesses.</p>
           </div>
         </article>
 
