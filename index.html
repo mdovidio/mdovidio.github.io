@@ -303,6 +303,13 @@ html:has(.img-viewer[open]) { overflow: hidden; }
 .job p + p { max-width: 72ch; }
 .creds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--oat); }
 .creds li + li { margin-top: 6px; }
+.creds > div:not(.tools-block) { padding-block: 6px 10px; }
+.creds > div:nth-child(2), .creds > div:nth-child(3) { padding-left: 32px; border-left: 1px solid var(--oat); }
+.creds > div:not(.tools-block) h3 { margin-bottom: 18px; font-weight: 600; color: var(--ink); letter-spacing: 0.16em; }
+.creds > div:not(.tools-block) li { font-size: 1.02rem; line-height: 1.45; }
+.creds > div:not(.tools-block) li + li { margin-top: 14px; }
+.creds .side li { padding-left: 4px; }
+.creds .side li + li { margin-top: 8px; }
 .creds .group + .group { margin-top: 10px; }
 .tools-block { grid-column: 1 / -1; }
 .tools { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
@@ -336,6 +343,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .item-wide figure { flex: none; }
   .item-wide .item-text { padding: 24px 26px 28px; }
   .creds { grid-template-columns: minmax(0, 1fr); }
+  .creds > div:nth-child(2), .creds > div:nth-child(3) { padding-left: 0; padding-top: 28px; border-left: 0; border-top: 1px solid var(--oat); }
   .job { grid-template-columns: minmax(0, 1fr); }
   .work, .commercial, .about, .experience, .contact { padding-block: 52px; }
 }
@@ -614,22 +622,22 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <ul>
             <li><strong>Elon University</strong>, BA in Public Health Studies</li>
             <li>Minors in Entrepreneurship, Food Studies and Italian Studies</li>
-            <li>Study abroad in Florence, Italy</li>
+            <li>Study Abroad in Florence, Italy</li>
           </ul>
         </div>
         <div>
-          <h3>Leadership &amp; learning</h3>
+          <h3>Leadership &amp; Learning</h3>
           <ul>
             <li>Founder &amp; President, Italian Club at Elon</li>
             <li>PR Manager, Shirley Tempos A Cappella</li>
-            <li>Wharton Digital Marketing Certificate (in progress)</li>
+            <li>Wharton Digital Marketing Certificate &mdash; <em>In Progress</em></li>
           </ul>
         </div>
         <div class="side">
-          <h3>Where I've been</h3>
+          <h3>Where I've Been</h3>
           <ul>
             <li>From North Carolina, now in New York City</li>
-            <li>Moved 9 times including Germany, Michigan, and Los Angeles</li>
+            <li>Lived across the US and Europe (9 moves)</li>
             <li>Studied and worked in Italy and in Medellín, Colombia</li>
             <li>Citizen of the US, Italy and Canada</li>
             <li>English (native), Italian (intermediate)</li>
