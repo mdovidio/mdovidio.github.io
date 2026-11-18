@@ -206,6 +206,12 @@ h2.section-label, .section-head h2.section-label, .experience h2.section-label {
 .lav-dialog::backdrop { background: rgba(67, 52, 45, .65); }
 .lav-close { position: sticky; top: 0; float: right; z-index: 2; width: 40px; height: 40px; margin: -12px -12px 0 8px; border: 0; border-radius: 50%; background: var(--cream); color: var(--ink); font: 400 1.5rem/1 var(--body); cursor: pointer; }
 html:has(.lav-dialog[open]) { overflow: hidden; }
+.zoomable { cursor: zoom-in; }
+.img-viewer { max-width: none; max-height: none; padding: 0; border: 0; background: transparent; overflow: visible; }
+.img-viewer::backdrop { background: rgba(43, 33, 28, .88); }
+.img-viewer img { display: block; width: auto; height: auto; max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); border-radius: 4px; cursor: zoom-out; }
+.img-viewer .lav-close { position: absolute; top: 10px; right: 10px; float: none; margin: 0; }
+html:has(.img-viewer[open]) { overflow: hidden; }
 @media (max-width: 760px) {
   .lav-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .lav-dialog { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; padding: 20px 16px; border-radius: 0; }
@@ -735,6 +741,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     window.addEventListener('load', toTop);
   })();
 </script>
+<dialog class="img-viewer" id="img-viewer" aria-label="Enlarged image"><button class="lav-close" type="button" aria-label="Close">&times;</button><img alt=""></dialog>
 <script>
   // Lavazza popups: open from either the image or the button, close with X, Esc or a click outside.
   document.querySelectorAll('[data-open]').forEach(function (btn) {
@@ -742,6 +749,21 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       document.getElementById(btn.getAttribute('data-open')).showModal();
     });
   });
+  (function () {
+    var v = document.getElementById('img-viewer');
+    var big = v.querySelector('img');
+    v.querySelector('.lav-close').addEventListener('click', function () { v.close(); });
+    v.addEventListener('click', function (e) { if (e.target === v || e.target === big) v.close(); });
+    v.addEventListener('close', function () { big.removeAttribute('src'); });
+    document.querySelectorAll('.banner-row img, .post-grid img, .made-photo').forEach(function (img) {
+      img.classList.add('zoomable');
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      function open() { big.src = img.currentSrc || img.src; big.alt = img.alt; v.showModal(); }
+      img.addEventListener('click', open);
+      img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+  })();
   document.querySelectorAll('.lav-dialog').forEach(function (d) {
     d.querySelector('.lav-close').addEventListener('click', function () { d.close(); });
     d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
